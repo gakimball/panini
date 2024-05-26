@@ -14,7 +14,7 @@
   "dependencies": {
     "deepmerge": "^1.5.2",
     "front-matter": "^2.0.5",
-    "glob": "^7.1.4",
+    "glob": "^9.0.0",
     "handlebars": "^4.0.5",
     "highlight.js": "^8.9.1",
     "js-yaml": "^3.14.0",
@@ -23,7 +23,7 @@
     "slash": "^1.0.0",
     "strip-bom": "2.0.0",
     "through2": "^2.0.5",
-    "vinyl-fs": "^3.0.3"
+    "vinyl-fs": "^4.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
