@@ -23,7 +23,7 @@
     "slash": "^1.0.0",
     "strip-bom": "2.0.0",
     "through2": "^2.0.5",
-    "vinyl-fs": "^3.0.3"
+    "vinyl-fs": "^4.0.0"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.0.1",
