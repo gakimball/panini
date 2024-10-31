@@ -78,6 +78,23 @@ describe('Panini', () => {
       });
   });
 
+  it('builds a page with inline partials used within layout', done => {
+    var p = new Panini({
+      root: FIXTURES + 'partials-inline/pages/',
+      layouts: FIXTURES + 'partials-inline/layouts/'
+    });
+
+    p.refresh();
+
+    src(FIXTURES + 'partials-inline/pages/*')
+      .pipe(p.render())
+      .pipe(dest(FIXTURES + 'partials-inline/build'))
+      .on('finish', () => {
+        equal(FIXTURES + 'partials-inline/expected', FIXTURES + 'partials-inline/build');
+        done();
+      });
+  });
+
   it('builds a page with custom data', done => {
     var p = new Panini({
       root: FIXTURES + 'data-page/pages/',
