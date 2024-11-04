@@ -1,8 +1,11 @@
 <html>
   <body>
+    {{#> layout-inline-partial-top}}
+    <p>No layout-inline-partial-top default content</p>
+    {{/layout-inline-partial-top}}
     {{> body}}
-    {{#> layout-inline-partial}}
-    <p>No layout-inline-partial default content</p>
-    {{/layout-inline-partial}}
+    {{#> layout-inline-partial-bot}}
+    <p>No layout-inline-partial-bot default content</p>
+    {{/layout-inline-partial-bot}}
   </body>
 </html>
