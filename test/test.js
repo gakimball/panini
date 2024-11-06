@@ -81,7 +81,8 @@ describe('Panini', () => {
   it('builds a page with inline partials used within layout', done => {
     var p = new Panini({
       root: FIXTURES + 'partials-inline/pages/',
-      layouts: FIXTURES + 'partials-inline/layouts/'
+      layouts: FIXTURES + 'partials-inline/layouts/',
+      inlinelayout: 'layout-'
     });
 
     p.refresh();
