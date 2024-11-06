@@ -97,6 +97,59 @@ Path to a folder containing HTML partials. Partial files can have the extension 
 {{> header}}
 ```
 
+### `inlinelayout`
+
+**Type:** `String`
+
+Inline partial name prefix, if not set - the default prefix will be `layout-`. Page Inline Partials to be used within layout pages.
+
+```html
+{{#*inline "layout-inline-partial-bot"}}
+  <!-- Replace Header -->
+{{/inline}}
+{{#*inline "layout-inline-partial-top"}}
+  <!-- Replace Footer -->
+{{/inline}}
+<!-- Body Content -->
+```
+
+The page inline partials with `inlinelayout` prefix can be used within the layouts.  If there is not a corresponding inline partial on the page, then the default content will be displayed.  Note: the default content can be made empty.
+
+```html
+{{#> layout-inline-partial-top}}
+  <!-- Default Header up here -->
+{{/layout-inline-partial-top}}
+{{> body}}
+{{#> layout-inline-partial-bot}}
+  <!-- Footer down here -->
+{{/layout-inline-partial-bot}}
+```
+
+To use an `inlinelayout` other than the default `layout-` prefix or `panini.options.inlinelayout` prefix on a specific page, override it in the Front Matter on that page.
+
+```html
+---
+inlinelayout: alt-inlinelayout-
+---
+{{#*inline "alt-inlinelayout-inline-partial-bot"}}
+  <!-- Replace Header -->
+{{/inline}}
+{{#*inline "alt-inlinelayout-inline-partial-top"}}
+  <!-- Replace Footer -->
+{{/inline}}
+<!-- Body Content -->
+```
+layout
+```html
+{{#> alt-inlinelayout-inline-partial-top}}
+  <!-- Default Header up here -->
+{{/alt-inlinelayout-inline-partial-top}}
+{{> body}}
+{{#> alt-inlinelayout-inline-partial-bot}}
+  <!-- Footer down here -->
+{{/alt-inlinelayout-inline-partial-bot}}
+```
+
 ### `helpers`
 
 **Type:** `String`
